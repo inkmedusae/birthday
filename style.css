@@ -1,63 +1,73 @@
 body {
-    background-color: #eef1ed;
-    overflow: hidden;
+    background-color: #3e6642;
+    overflow-x: hidden;
 }
 .main {
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-60%, -60%);
-    width: 21.5rem;
-    height: 20rem;
-    margin: 2rem;
-
-    /* overflow hidden to enable a sliding animation upon reveal */
-    overflow: hidden;
+    left: -5%;
+    top: -110%;
+    width: 105%;
+    height: 105%;
+    transform: translateY(-100%);
 }
-.revealButton {
-    color: #fff;
-    font-weight: bolder;
-    border-radius: 5%;
-    font-family: 'Montserrat', sans-serif;
-    border: 2px solid #fff;
-    background: #a2c7a5;
-    padding: 0.75rem;
-    margin-top: 1.5%;
-    margin-left: 1.5%;
-    z-index: 100;
+.main {
+    animation: down 3s ease-in 1 forwards;
 }
-.revealButton:hover {
-    background: #fff;
-    cursor: pointer;
-    color: #a2c7a5;
-}
-.cover {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background: #a2c7a5;
-    z-index: -1;
-    transition: 3s ease-in;
-}
-.cover[data-visible="true"] {
-    transform: translateY(100%);
+@keyframes down {
+    0% {
+    }
+    100% {
+        transform: translateY(150%);
+    }
 }
 .picContainer {
     position: absolute;
+    left: 50%;
+    top: 33%;
+    transform: translate(-75%, -150%);
     z-index: -3;
-    width: 100%;
-    height: 100%;
-    background: url("birthdaygirl.jpg");
-    background-size:contain;
+    margin: 5rem;
+    width: 20rem;
+    height: 20rem;
+    background: url("bunny.jpg");
+    background-size: contain;
 }
-.title {
+
+@media screen and (max-width: 550px) {
+    .picContainer {
+        margin-top: 2rem;
+    }
+    .text {
+        margin-top: 3rem;
+    }
+}
+.text, .text2 {
     font-family: sans-serif;
     position: absolute;
-    top: 3rem;
     width: 100%;
     text-align: center;
-    display: none;
+    z-index: -3;
+    margin-bottom: 3rem;
+    color: rgb(231, 231, 231);
 }
-.title[aria-expanded="true"] {
-    display: block;
+.text {
+    top: -50%;
+}
+.text2 {
+    top: 15%;
+    font-size: 1em;
+    word-wrap: break-word;
+    margin: 1rem;
+}
+.marine {
+    position: absolute;
+    left: 50%;
+    top: 90%;
+    transform: translate(-75%, -150%);
+    z-index: -3;
+    margin: 5rem;
+    width: 20rem;
+    height: 20rem;
+    background: url("marine.png");
+    background-size: cover;
 }

@@ -1,6 +1,6 @@
 const button = document.querySelector(".revealButton")
-const cover = document.querySelector(".cover")
-const text = document.querySelector(".title")
+const cover = document.querySelector(".main")
+const text = document.querySelector(".text")
 button.addEventListener("click", () => {
     const visibility = cover.getAttribute('data-visible')
     if (visibility === "false") {
